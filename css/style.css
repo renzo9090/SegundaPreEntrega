@@ -1,0 +1,132 @@
+/*resetea estilo*/
+*{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+@font-face{
+    font-family: "titulos";
+    src: url(../fuentes/ice_cream_2\ titulos/.otf);
+    font-family: "texto";
+    src: url(../fuentes/espect_retro/EspectRetro_PERSONAL_USE_ONLY.otf);
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgba(8, 8, 8, 0.61);
+}
+.logo-corazon1-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-area: logo1;
+}
+.logo-corazon2-right{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    grid-area: logo2;
+}
+.titulo{
+    font-size: 26px;
+    font-family: "titulos";
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-area: titulo;
+}
+.columna-de-navegacion{
+    font-family: "texto";
+    font-weight: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-area: navegacion;
+    border: solid 2px;
+    
+}
+nav{
+    background-color: rgba(252, 128, 83, 0.753);
+    display: grid;
+    grid-template-areas: 
+    "logo1 titulo logo2"
+    "navegacion navegacion navegacion"
+    ;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.cuerpo{
+    font-family: "texto";
+    font-size: x-large;
+    background-color: rgba(138, 170, 74, 0.719);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.foto-inicial-izquierda img{
+    width: 200px;
+    height: 200px;
+    border: 3px solid;
+}
+.foto-inicial-derecha img{
+    width: 200px;
+    height: 200px;
+    border: 3px solid;
+
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(197, 120, 236, 0.76);
+}
+footer img{
+    width: 100px;
+}
+@media screen and (max-width: 1024px){
+    nav {
+        grid-template-areas: 
+        "logo1 titulo logo2";
+        grid-template-rows: 50px 50px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .titulo{
+        border: 3px solid;
+        font-size: large;
+    }
+    .columna-de-navegacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cuerpo{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3,1fr;
+        gap: 30px;
+        border: 1px solid;
+    }
+    .foto-inicial-izquierda{
+        display: flex;
+        flex-direction: column;
+    }
+    .foto-inicial-derecha{
+        display: flex;
+        flex-direction: column;
+    }
+    .pie{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        gap: 50px;
+    }
+}
