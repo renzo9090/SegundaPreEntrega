@@ -2,7 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-    overflow: auto;
 }
 @font-face{
     font-family: "titulos";
@@ -102,10 +101,18 @@ footer img{
         "logo1 titulo logo2";
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        justify-content: space-between;
         }
     .titulo{
-        
-
+        font-size: 50px;
+    }
+    .logo-corazon1-left{
+        width: 100px;
+        height: 100px;
+    }
+    .logo-corazon2-right{
+        width: 100px;
+        height: 100px;
     }
     .columna-de-navegacion{
         display: flex;
@@ -120,11 +127,8 @@ footer img{
     
     .cuerpo{
         display: grid;
-        grid-template-areas: "historia bienvenidos fotoizquierda fotoderecha";
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        align-items: center;
-        justify-content: space-around;
+        grid-template-areas:"historia bienvenidos fotoizquierda fotoderecha";
+        justify-content: space-between;
     }
     .Bienvenidos{
         grid-area: bienvenidos;
