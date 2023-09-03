@@ -127,8 +127,14 @@ footer img{
     
     .cuerpo{
         display: grid;
-        grid-template-areas:"historia bienvenidos fotoizquierda fotoderecha";
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "bienvenidos bienvenidos bienvenidos bienvenidos"
+        "historia fotoizquierda fotoderecha fotoderecha"
+        "historia fotoizquierda fotoderecha fotoderecha";
         justify-content: space-between;
+        gap: 90px;
     }
     .Bienvenidos{
         grid-area: bienvenidos;
@@ -137,12 +143,10 @@ footer img{
     }
     .historia{
         grid-area: historia;
-        justify-content: flex-start;
         border: solid 1px;
         background-color: aliceblue;
-        width: 200px; 
-        margin: 0%;   
-        padding: 0%;
+        height: 400px;
+        width: 400px;
     }
 
     .foto-inicial-izquierda{
