@@ -89,6 +89,13 @@ footer{
 footer img{
     width: 100px;
 }
+.contacto{
+    background-color: rgba(138, 170, 74, 0.719);
+}
+.h1{
+    display: flex;
+    justify-content: center;
+}
 @media screen and (max-width: 1024px){
     nav {
         grid-template-areas: 
