@@ -96,39 +96,60 @@ footer img{
     display: flex;
     justify-content: center;
 }
-@media screen and (max-width: 1024px){
+@media (min-width: 900px) and (max-width: 1440px){    
     nav {
         grid-template-areas: 
         "logo1 titulo logo2";
-        grid-template-rows: 50px 50px;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-    }
+        }
     .titulo{
-        border: 3px solid;
-        font-size: large;
+        
+
     }
     .columna-de-navegacion{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 200px;
+        font-size: large;
     }
+    .columna-de-navegacion :hover{
+        background-color: aqua;
+    }
+    
     .cuerpo{
-        display: flex;
-        flex-direction: row-reverse;
+        display: grid;
+        grid-template-areas: "historia bienvenidos fotoizquierda fotoderecha";
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
         align-items: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3,1fr;
-        gap: 30px;
-        border: 1px solid;
+        justify-content: space-around;
     }
+    .Bienvenidos{
+        grid-area: bienvenidos;
+        display: flex;
+        justify-content: center;
+    }
+    .historia{
+        grid-area: historia;
+        justify-content: flex-start;
+        border: solid 1px;
+        background-color: aliceblue;
+        width: 200px; 
+        margin: 0%;   
+        padding: 0%;
+    }
+
     .foto-inicial-izquierda{
         display: flex;
         flex-direction: column;
+        grid-area: fotoizquierda;
     }
     .foto-inicial-derecha{
         display: flex;
         flex-direction: column;
+        grid-area: fotoderecha;
     }
     .pie{
         display: flex;
