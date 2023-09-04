@@ -51,8 +51,7 @@ nav{
     display: grid;
     grid-template-areas: 
     "logo1 titulo logo2"
-    "navegacion navegacion navegacion"
-    ;
+    "navegacion navegacion navegacion";
     grid-template-rows: 50px 50px;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -97,9 +96,11 @@ footer img{
 }
 @media (min-width: 900px) and (max-width: 1440px){    
     nav {
-        grid-template-areas: 
-        "logo1 titulo logo2";
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "logo1 titulo logo2"
+        "navegacion navegacion navegacion";
         gap: 20px;
         justify-content: space-between;
         }
@@ -120,6 +121,8 @@ footer img{
         align-items: center;
         width: 200px;
         font-size: large;
+        grid-area: navegacion;
+        justify-self: flex-end;
     }
     .columna-de-navegacion :hover{
         background-color: aqua;
