@@ -172,5 +172,6 @@ footer img{
         flex-direction: row-reverse;
         justify-content: space-around;
         gap: 50px;
+        align-items: stretch;
     }
 }
