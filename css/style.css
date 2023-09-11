@@ -90,10 +90,17 @@ footer img{
 .contacto{
     background-color: rgba(138, 170, 74, 0.719);
 }
-.h1{
+.eventos{
+    background-color: rgba(138, 170, 74, 0.719);
+}
+.tituloeventos{
+    font-size: 50px;
+    font-family: "titulos";
     display: flex;
+    flex-direction: row;
     justify-content: center;
 }
+
 @media (min-width: 900px) and (max-width: 1440px){    
     nav {
         grid-template-columns: repeat(3, 1fr);
@@ -129,6 +136,10 @@ footer img{
     }
     .columna-de-navegacion :hover{
         background-color: aqua;
+    }
+    .h1{
+        display: flex;
+        justify-content: center;
     }
     
     .cuerpo{
@@ -185,4 +196,7 @@ footer img{
         background: rgb(63,94,251);
         background: linear-gradient(306deg, rgb(207, 63, 251) 0%, rgba(0,0,0,0.37298669467787116) 100%);
     }
-}
+    .eventos{
+        background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
+
+    }
