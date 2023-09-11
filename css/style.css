@@ -101,6 +101,8 @@ footer img{
         grid-template-areas: 
         "logo1 titulo logo2"
         "navegacion navegacion navegacion";
+        background: rgb(63,94,251);
+        background: linear-gradient(139deg, rgb(251, 148, 63) 0%, rgb(202, 194, 194) 100%);
         }
     .titulo{
         font-size: 55px;
@@ -139,6 +141,7 @@ footer img{
         "historia fotoizquierda fotoderecha mapa";
         justify-content: space-between;
         gap: 90px;
+        background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
     }
     .Bienvenidos{
         grid-area: bienvenidos;
@@ -164,8 +167,14 @@ footer img{
         flex-direction: column;
         grid-area: fotoderecha;
     }
-    iframe{
+    .mapa{
         grid-area: mapa;
+        transition: all 1.5s;
+    }
+    .mapa:hover{
+        transform: scale(1.2);
+
+    }
     }
     .pie{
         display: flex;
@@ -173,5 +182,7 @@ footer img{
         justify-content: space-around;
         gap: 50px;
         align-items: stretch;
+        background: rgb(63,94,251);
+        background: linear-gradient(306deg, rgb(207, 63, 251) 0%, rgba(0,0,0,0.37298669467787116) 100%);
     }
 }
