@@ -114,7 +114,11 @@ footer img {
 }
 
 .seccion-productos {
-  background-color: rgba(138, 170, 74, 0.719);
+  background: url("../img/hebras.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: 0.8;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat 4, 1fr;
@@ -124,20 +128,20 @@ footer img {
   justify-content: space-between;
   gap: 10px;
 }
-.seccion-productos .imghebras {
-  width: 100%;
-}
 .seccion-productos .titulo-productos {
   grid-area: titupro;
   font-family: "titulos";
   text-align: center;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  position: relative;
+  justify-content: left;
 }
 .seccion-productos .titulo-hebras {
   grid-area: tituheb;
   font-family: "titulos";
-  text-align: center;
+  text-align: left;
 }
 .seccion-productos .lista-de-té {
   grid-area: liste;
@@ -239,10 +243,25 @@ footer img {
     background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
   }
   .seccion-productos {
-    background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
+    background: url("../img/hebras.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0.8;
+  }
+  .seccion-productos .titulo-productos {
+    position: absolute;
+    position: relative;
+    justify-self: left;
+    color: rgb(10, 10, 10);
+  }
+  .seccion-productos .titulo-hebras {
+    justify-self: right;
+    color: rgb(3, 70, 66);
   }
   .seccion-productos .lista-de-té {
-    list-style-type: upper-alpha;
+    color: rgb(0, 0, 0);
+    justify-self: right;
   }
 }
 
