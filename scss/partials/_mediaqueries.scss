@@ -39,6 +39,7 @@
         display: flex;
         justify-content: center;
     }
+
     .cuerpo{
         display: grid;
         grid-template-rows: repeat(3, 1fr);
@@ -57,14 +58,12 @@
             font-size: 50px;
         }
         .historia{
-            .historia{
                 grid-area: historia;
                 border: solid 1px;
                 background-color: aliceblue;
                 height: 400px;
                 width: 400px;
-                }   
-    
+        }   
         .foto-inicial-izquierda{
             display: flex;
             flex-direction: column;
@@ -127,5 +126,4 @@
         }        
     
     }
-}
 }
