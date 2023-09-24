@@ -1,0 +1,131 @@
+@media (min-width: 900px) and (max-width: 1440px){    
+    nav {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "logo1 titulo logo2"
+        "navegacion navegacion navegacion";
+        background: rgb(63,94,251);
+        background: linear-gradient(139deg, rgb(251, 148, 63) 0%, rgb(202, 194, 194) 100%);
+        .titulo{
+            font-size: 55px;
+            justify-self: center;
+        }
+        .logo-corazon1-left{
+            width: $ancho;
+            height: $alto;
+            justify-self: flex-start;
+        }
+        .logo-corazon2-right{
+            width: $ancho;
+            height: $alto;
+            justify-self: flex-end;
+        }
+        .columna-de-navegacion{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: $ancho*2;
+            font-size: large;
+            grid-area: navegacion;
+            justify-self: flex-end;
+        }
+        .columna-de-navegacion :hover{
+            background-color: aqua;
+        }
+    
+        }
+    .h1{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .cuerpo{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "bienvenidos bienvenidos bienvenidos bienvenidos"
+        "historia fotoizquierda fotoderecha mapa"
+        "historia fotoizquierda fotoderecha mapa";
+        justify-content: space-between;
+        gap: 90px;
+        background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
+        .Bienvenidos{
+            grid-area: bienvenidos;
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+        }
+        .historia{
+            grid-area: historia;
+            border: solid 1px;
+            background-color: aliceblue;
+            height: $alto*4;
+            width: $ancho;
+        }   
+    
+        .foto-inicial-izquierda{
+            display: flex;
+            flex-direction: column;
+            grid-area: fotoizquierda;
+            gap: 100px;
+        }
+        .foto-inicial-derecha{
+            display: flex;
+            flex-direction: column;
+            grid-area: fotoderecha;
+            gap: 100px;
+        }
+        .mapa{
+            grid-area: mapa;
+            transition: all 1.5s;
+        }
+        .mapa:hover{
+            transform: scale(1.2);
+        }
+    
+    }
+    .pie{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        gap: 50px;
+        align-items: stretch;
+        background: rgb(63,94,251);
+        background: linear-gradient(306deg, rgb(207, 63, 251) 0%, rgba(0,0,0,0.37298669467787116) 100%);
+    }
+    .eventos{
+        background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
+    }
+    .seccion-productos{
+        background:url("../img/hebras.jpg"); 
+        width: 100%;
+        height: 800px;
+        background-repeat: no-repeat; 
+        background-position: 50% 50%; 
+        background-size: cover; 
+        .texto-productos{
+            background-color: rgb(0, 0, 0);
+            opacity: 0.8;
+            color: white;
+            padding-left: 100px;
+            margin: 100px;
+        }
+        }   
+    .titulo-cursos{
+        background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
+    }
+    .h1{
+        background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
+    }
+    .contacto{
+        background: radial-gradient(circle, rgba(138, 170, 74, 0.719), rgb(212, 199, 199));
+        .formulario{
+            line-height: 2em;
+            margin: 50px;
+        }        
+    
+    }
+}
+//finmediaqueries

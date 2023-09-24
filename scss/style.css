@@ -20,27 +20,21 @@ a {
   color: rgba(8, 8, 8, 0.61);
 }
 
-nav {
-  background-color: rgba(252, 128, 83, 0.753);
-  display: grid;
-  grid-template-areas: "logo1 titulo logo2" "navegacion navegacion navegacion";
-  grid-template-rows: 50px 50px;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-nav .logo-corazon1-left {
+.logo-corazon1-left {
   display: flex;
   flex-direction: row;
   justify-content: center;
   grid-area: logo1;
 }
-nav .logo-corazon2-right {
+
+.logo-corazon2-right {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   grid-area: logo2;
 }
-nav .titulo {
+
+.titulo {
   font-size: 26px;
   font-family: "titulos";
   display: flex;
@@ -48,7 +42,8 @@ nav .titulo {
   justify-content: center;
   grid-area: titulo;
 }
-nav .columna-de-navegacion {
+
+.columna-de-navegacion {
   font-family: "texto";
   font-weight: 1000;
   display: flex;
@@ -58,28 +53,36 @@ nav .columna-de-navegacion {
   border: solid 2px;
 }
 
+nav {
+  background-color: rgba(252, 128, 83, 0.753);
+  display: grid;
+  grid-template-areas: "logo1 titulo logo2" "navegacion navegacion navegacion";
+  grid-template-rows: 50px 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 .cuerpo {
   font-family: "texto";
   font-size: x-large;
   background-color: rgba(138, 170, 74, 0.719);
   display: flex;
   flex-direction: column;
-  justify-self: center;
+  justify-content: center;
   align-items: center;
-  gap: 100px;
-  padding: 100px;
+  gap: 30px;
 }
-.cuerpo .foto-inicial-izquierda img {
+
+.foto-inicial-izquierda img {
   width: 200px;
   height: 200px;
   border: 3px solid;
-  gap: 100px;
 }
-.cuerpo .foto-inicial-derecha img {
+
+.foto-inicial-derecha img {
   width: 200px;
   height: 200px;
   border: 3px solid;
-  gap: 100px;
 }
 
 footer {
@@ -89,23 +92,20 @@ footer {
   align-items: center;
   background-color: rgba(197, 120, 236, 0.76);
 }
+
 footer img {
   width: 100px;
-  padding: 10px;
 }
 
 .contacto {
   background-color: rgba(138, 170, 74, 0.719);
 }
-.contacto .formulario {
-  line-height: 2em;
-  margin: 50px;
-}
 
 .eventos {
   background-color: rgba(138, 170, 74, 0.719);
 }
-.eventos .tituloeventos {
+
+.tituloeventos {
   font-size: 50px;
   font-family: "titulos";
   display: flex;
@@ -115,11 +115,12 @@ footer img {
 
 .seccion-productos {
   background: url("../img/hebras.jpg");
-  width: 100%;
-  height: 800px;
+  width: 50%;
+  height: 50%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
+  opacity: 0.8;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat 4, 1fr;
@@ -130,11 +131,8 @@ footer img {
   gap: 10px;
 }
 .seccion-productos .texto-productos {
-  background-color: rgb(0, 0, 0);
-  opacity: 0.8;
-  color: white;
-  align-self: left;
-  margin: 100px;
+  background: olivedrab;
+  opacity: 0.6;
 }
 .seccion-productos .titulo-productos {
   grid-area: titupro;
@@ -161,24 +159,6 @@ footer img {
   font-family: "texto";
 }
 
-.titulo-cursos {
-  background-color: rgba(138, 170, 74, 0.719);
-  font-size: 50px;
-  font-family: "titulos";
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.h1 {
-  background-color: rgba(138, 170, 74, 0.719);
-  font-size: 50px;
-  font-family: "titulos";
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 @media (min-width: 900px) and (max-width: 1440px) {
   nav {
     grid-template-columns: repeat(3, 1fr);
@@ -187,21 +167,21 @@ footer img {
     background: rgb(63, 94, 251);
     background: linear-gradient(139deg, rgb(251, 148, 63) 0%, rgb(202, 194, 194) 100%);
   }
-  nav .titulo {
+  .titulo {
     font-size: 55px;
     justify-self: center;
   }
-  nav .logo-corazon1-left {
+  .logo-corazon1-left {
     width: 100px;
     height: 100px;
     justify-self: flex-start;
   }
-  nav .logo-corazon2-right {
+  .logo-corazon2-right {
     width: 100px;
     height: 100px;
     justify-self: flex-end;
   }
-  nav .columna-de-navegacion {
+  .columna-de-navegacion {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,7 +190,7 @@ footer img {
     grid-area: navegacion;
     justify-self: flex-end;
   }
-  nav .columna-de-navegacion :hover {
+  .columna-de-navegacion :hover {
     background-color: aqua;
   }
   .h1 {
@@ -226,36 +206,34 @@ footer img {
     gap: 90px;
     background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
   }
-  .cuerpo .Bienvenidos {
+  .Bienvenidos {
     grid-area: bienvenidos;
     display: flex;
     justify-content: center;
     font-size: 50px;
   }
-  .cuerpo .historia {
+  .historia {
     grid-area: historia;
     border: solid 1px;
     background-color: aliceblue;
     height: 400px;
-    width: 100px;
+    width: 400px;
   }
-  .cuerpo .foto-inicial-izquierda {
+  .foto-inicial-izquierda {
     display: flex;
     flex-direction: column;
     grid-area: fotoizquierda;
-    gap: 100px;
   }
-  .cuerpo .foto-inicial-derecha {
+  .foto-inicial-derecha {
     display: flex;
     flex-direction: column;
     grid-area: fotoderecha;
-    gap: 100px;
   }
-  .cuerpo .mapa {
+  .mapa {
     grid-area: mapa;
     transition: all 1.5s;
   }
-  .cuerpo .mapa:hover {
+  .mapa:hover {
     transform: scale(1.2);
   }
   .pie {
@@ -272,32 +250,9 @@ footer img {
   }
   .seccion-productos {
     background: url("../img/hebras.jpg");
-    width: 100%;
-    height: 800px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
+    opacity: 0.6;
   }
   .seccion-productos .texto-productos {
-    background-color: rgb(0, 0, 0);
-    opacity: 0.8;
-    color: white;
-    padding-left: 100px;
-    margin: 100px;
+    background-color: aqua;
   }
-  .titulo-cursos {
-    background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
-  }
-  .h1 {
-    background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
-  }
-  .contacto {
-    background: radial-gradient(circle, rgba(138, 170, 74, 0.719), rgb(212, 199, 199));
-  }
-  .contacto .formulario {
-    line-height: 2em;
-    margin: 50px;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

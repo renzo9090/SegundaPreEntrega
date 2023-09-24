@@ -1,8 +1,7 @@
 /*resetea estilo*/
-*{
-    margin: 0;
-    padding: 0;
-}
+@import "./partials/reset";
+//variables 
+@import "./partials/variables";
 //fuentes
 @font-face{
     font-family: "titulos";
@@ -18,36 +17,6 @@ a{
     text-decoration: none;
     color: rgba(8, 8, 8, 0.61);
 }
-.logo-corazon1-left{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    grid-area: logo1;
-}
-.logo-corazon2-right{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    grid-area: logo2;
-}
-.titulo{
-    font-size: 26px;
-    font-family: "titulos";
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    grid-area: titulo;
-}
-.columna-de-navegacion{
-    font-family: "texto";
-    font-weight: 1000;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    grid-area: navegacion;
-    border: solid 2px;
-    
-}
 //navbar
 nav{
     background-color: rgba(252, 128, 83, 0.753);
@@ -58,6 +27,37 @@ nav{
     grid-template-rows: 50px 50px;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    .logo-corazon1-left{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        grid-area: logo1;
+    }
+    .logo-corazon2-right{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        grid-area: logo2;
+    }
+    .titulo{
+        font-size: 26px;
+        font-family: "titulos";
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        grid-area: titulo;
+    }
+    .columna-de-navegacion{
+        font-family: "texto";
+        font-weight: 1000;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        grid-area: navegacion;
+        border: solid 2px;
+        
+    }
+    
 }
 //finnavbar
 .cuerpo{
@@ -66,20 +66,22 @@ nav{
     background-color: rgba(138, 170, 74, 0.719);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-self: center;
     align-items: center;
-    gap: 30px;
-}
-.foto-inicial-izquierda img{
-    width: 200px;
-    height: 200px;
-    border: 3px solid;
-}
-.foto-inicial-derecha img{
-    width: 200px;
-    height: 200px;
-    border: 3px solid;
-
+    gap: 100px;
+    padding: 100px;
+    .foto-inicial-izquierda img{
+        width: 200px;
+        height: 200px;
+        border: 3px solid;
+        gap: 100px;  
+    }
+    .foto-inicial-derecha img{
+        width: 200px;
+        height: 200px;
+        border: 3px solid;
+        gap: 100px;
+    }
 }
 footer{
     display: flex;
@@ -87,29 +89,36 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: rgba(197, 120, 236, 0.76);
-}
-footer img{
-    width: 100px;
+    img{
+        width: $ancho;
+        padding: 10px;
+    }
 }
 .contacto{
     background-color: rgba(138, 170, 74, 0.719);
+    .formulario{
+        line-height: 2em;
+        margin: 50px;
+    }
 }
 .eventos{
     background-color: rgba(138, 170, 74, 0.719);
-}
-.tituloeventos{
-    font-size: 50px;
-    font-family: "titulos";
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    .tituloeventos{
+        font-size: 50px;
+        font-family: "titulos";
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
 }
 .seccion-productos{
     background:url("../img/hebras.jpg"); 
+    width: 100%;
+    height: $alto*8;
     background-repeat: no-repeat; 
     background-position: 50% 50%; 
     background-size: cover; 
-    opacity: 0.8;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat (4, 1fr);
@@ -122,6 +131,14 @@ footer img{
     justify-content: space-around;
     justify-content: space-between;
     gap: 10px;
+
+    .texto-productos{
+        background-color: rgb(0, 0, 0);
+        opacity: 0.8;
+        color: white;
+        align-self: left;
+        margin: 100px;
+    }
 
     .titulo-productos{
         grid-area: titupro;
@@ -139,7 +156,6 @@ footer img{
         font-family:"titulos";
         text-align: left;
         
-
     }
     .lista-de-té{
         grid-area: liste;
@@ -153,128 +169,22 @@ footer img{
 
     }
 }
-//mediaqueries
-@media (min-width: 900px) and (max-width: 1440px){    
-    nav {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
-        "logo1 titulo logo2"
-        "navegacion navegacion navegacion";
-        background: rgb(63,94,251);
-        background: linear-gradient(139deg, rgb(251, 148, 63) 0%, rgb(202, 194, 194) 100%);
-        }
-    .titulo{
-        font-size: 55px;
-        justify-self: center;
-    }
-    .logo-corazon1-left{
-        width: 100px;
-        height: 100px;
-        justify-self: flex-start;
-    }
-    .logo-corazon2-right{
-        width: 100px;
-        height: 100px;
-        justify-self: flex-end;
-    }
-    .columna-de-navegacion{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 200px;
-        font-size: large;
-        grid-area: navegacion;
-        justify-self: flex-end;
-    }
-    .columna-de-navegacion :hover{
-        background-color: aqua;
-    }
-    .h1{
-        display: flex;
-        justify-content: center;
-    }
-    
-    .cuerpo{
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: 
-        "bienvenidos bienvenidos bienvenidos bienvenidos"
-        "historia fotoizquierda fotoderecha mapa"
-        "historia fotoizquierda fotoderecha mapa";
-        justify-content: space-between;
-        gap: 90px;
-        background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
-    }
-    .Bienvenidos{
-        grid-area: bienvenidos;
-        display: flex;
-        justify-content: center;
-        font-size: 50px;
-    }
-    .historia{
-        grid-area: historia;
-        border: solid 1px;
-        background-color: aliceblue;
-        height: 400px;
-        width: 400px;
-    }
-
-    .foto-inicial-izquierda{
-        display: flex;
-        flex-direction: column;
-        grid-area: fotoizquierda;
-    }
-    .foto-inicial-derecha{
-        display: flex;
-        flex-direction: column;
-        grid-area: fotoderecha;
-    }
-    .mapa{
-        grid-area: mapa;
-        transition: all 1.5s;
-    }
-    .mapa:hover{
-        transform: scale(1.2);
-
-    }
-    .pie{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-around;
-        gap: 50px;
-        align-items: stretch;
-        background: rgb(63,94,251);
-        background: linear-gradient(306deg, rgb(207, 63, 251) 0%, rgba(0,0,0,0.37298669467787116) 100%);
-    }
-    .eventos{
-        background: radial-gradient(circle, rgba(138, 170, 74, 0.719), white);
-
-    }
-    .seccion-productos{
-        background:url("../img/hebras.jpg");
-        background-repeat: no-repeat; 
-        background-position: 50% 50%; 
-        background-size: cover; 
-        opacity: 0.8;
-
-        .titulo-productos{
-            position: absolute;
-            position: relative;
-            justify-self: left;
-            color: rgb(10, 10, 10);
-        }    
-        .titulo-hebras{
-            justify-self: right;
-            color: rgb(3, 70, 66);
-        }
-        .lista-de-té{
-            color: rgb(0, 0, 0);
-            justify-self: right;
-
-        }
-    }
-    
+.titulo-cursos{
+    background-color: rgba(138, 170, 74, 0.719);
+    font-size: 50px;
+    font-family: "titulos";
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-//finmediaqueries
+.h1{
+    background-color: rgba(138, 170, 74, 0.719);
+    font-size: 50px;
+    font-family: "titulos";
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+//mediaqueries
+@import "./partials/mediaqueries"
