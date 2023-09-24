@@ -58,12 +58,13 @@
             font-size: 50px;
         }
         .historia{
-            grid-area: historia;
-            border: solid 1px;
-            background-color: aliceblue;
-            height: $alto*4;
-            width: $ancho;
-        }   
+            .historia{
+                grid-area: historia;
+                border: solid 1px;
+                background-color: aliceblue;
+                height: 400px;
+                width: 400px;
+                }   
     
         .foto-inicial-izquierda{
             display: flex;
